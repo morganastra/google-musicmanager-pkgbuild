@@ -1,7 +1,7 @@
 #!/bin/sh
 
 BIN_DIR=$HOME/bin
-CONFIG_DIR=$XDG_CONFIG_HOME/google-musicmanager-pkgbuild
+CONFIG_DIR=${XDG_CONFIG_HOME:-$HOME/.config}/google-musicmanager-pkgbuild
 
 mkdir -p $BIN_DIR
 mkdir -p $CONFIG_DIR

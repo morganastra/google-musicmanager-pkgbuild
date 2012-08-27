@@ -2,7 +2,7 @@
 # This script automates the creation of PKGBUILDs for google-musicmanager
 # Currently requires burp and packer 
 
-RUN_DIR=$XDG_CONFIG_HOME/google-musicmanager-pkgbuild
+RUN_DIR=${XDG_CONFIG_HOME:-$HOME/.config}/google-musicmanager-pkgbuild
 OUT_DIR=/tmp/google-musicmanager-pkgbuild-`date +%Y.%m.%d.%H:%M`
 
 mkdir $OUT_DIR
