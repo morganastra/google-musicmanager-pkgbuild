@@ -22,7 +22,7 @@ PKGVER=`tar xf control.tar.gz ./control -O | sed -ne 's/Version: //p' | sed -e '
 OLDPKGVER=`packer -Ss google-musicmanager | sed -ne "s/aur\/google-musicmanager \(.*\)-.* .*/\1/p"`
 #echo oldver: $OLDPKGVER #DEBUG
 
-if [ "$OLDPKGVER" == "$PKGVER" ]; then
+if [ "$1" != "-f" ] && [ "$OLDPKGVER" == "$PKGVER" ]; then
     echo Package already at latest version, exiting
     exit 0;
 fi
