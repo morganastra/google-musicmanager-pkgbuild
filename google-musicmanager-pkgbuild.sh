@@ -38,6 +38,6 @@ MD5_amd64=`md5sum google-musicmanager-beta_current_amd64.deb | sed -e 's/ .*//'`
 
 cat PKGBUILD.template | sed -e "s/PKGVER/$PKGVER/" -e "s/MD5_amd64/$MD5_amd64/" -e "s/MD5_i386/$MD5_i386/" > PKGBUILD
 
-makepkg --source
+mkaurball
 
 burp "$@" google-musicmanager-$PKGVER-1.src.tar.gz
